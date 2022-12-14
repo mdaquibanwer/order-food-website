@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+:root{
+    --primary-color: rgb(240, 58, 58);
+    font-size: 62.5%;
+
+}
+
+section{
+    background-color: #ececec;
+    padding:2rem 9%;
+      
+}
+
+/* ----- Special Classes and their effect ---- */
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 4rem;
+    color: var(--primary-color);
+    text-align: center;
+    border: 0.2rem solid var(--primary-color);
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background-color: #fff;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--primary-color);
+    transition: 0.3s linear;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+.btn:hover{
+    color: white;
+}
+.btn-f {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 4rem;
+    color: var(--primary-color);
+    text-align: center;
+    border: 0.2rem solid var(--primary-color);
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background-color: #000;
+}
+
+.btn-f::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--primary-color);
+    transition: 0.3s linear;
+    z-index: -1;
+}
+
+.btn-f:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+.btn-f:hover{
+    color: white;
+}
+
+span{
+    color: var(--primary-color);
+}
+
+h1{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #464646;
+}
+
+/* ----- Special Classes Ends ---- */
+
+/* ------------- Header --------------- */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fefefe;
+    width: 100%;
+    height: 7rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding:2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.199);
+    z-index: 1000;
+}
+
+header h3{
+    padding: 0rem 2rem;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+}
+#menu-bar{
+    font-size: 3rem;
+    cursor: pointer;
+    color:#666;
+    border-radius: .3rem;
+    padding:.5rem 1.5rem;
+    display: none;
+}  
+header nav ul{
+    display: flex;
+    padding: 0rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0rem 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #464646;
+}
+nav ul li a:hover{
+    color: var(--primary-color);
+}
+
+/* --------------------- Header Ends Here --------------- */
+
+/* -------------- Home section Start Here -------------------*/
+
+#home{
+    display: flex;
+    min-height: 100vmin;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    background: #f1f0f0;
+}
+
+#home .home-content{
+    width: 50%;
+    padding-top: 6.5rem;
+}
+#home .home-content h2{
+    padding-bottom: 1rem;
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+    color: #2e2e2e;
+}
+#home .home-content p{
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    word-spacing: 0.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #454545;
+}
+#home .home-image{
+    width: 45%;
+}
+#home .home-image img{
+    width: 100%;
+    animation: float 5s linear infinite;
+}
+@keyframes float {
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(3rem);
+    }
+}
+
+
+/* -------------- Home section Ends Here -------------------*/
+
+/* -------------- Speciality section Starts Here -------------------*/
+
+#speciality .items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#speciality .items-container .items{
+    width: 30%;
+    height: 25rem;
+    position: relative;
+    margin: 1rem;
+    background-color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border:0.1rem solid rgba(0,0,0,.3);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+#speciality .items-container .items .image{
+    position: absolute;
+    object-fit: cover;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+#speciality .items-container .items:hover .image{
+    width: 100%;
+    transition: 0.2s linear;
+}
+#speciality .items-container .items .content{
+    text-align: center;
+    padding: 2rem;
+    z-index: -1;
+}
+#speciality .items-container .items .content img{
+    margin: 1rem auto;
+}
+#speciality .items-container .items .content h3{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0.8rem auto;
+    font-size: 2.5rem;
+    color: #414141;
+}
+#speciality .items-container .items .content p{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    color: #343434;
+}
+
+/* -------------- Speciality section Ends Here -------------------*/
+
+/* -------------- Population section Starts Here -------------------*/
+
+
+#popular .items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#popular .items-container .items{
+    width: 30%;
+    height: 40rem;
+    text-align: center;
+    border: 0.2rem solid #dddcdc;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    background-color: #fff;
+    position: relative;
+    padding: 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+#popular .items-container .items .price{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 9rem;
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    padding: 0.6rem 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+#popular .items-container .items img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+#popular .items-container .items h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #454544;
+    margin: 0.5rem auto;
+}
+#popular .items-container .items .stars-rating{
+    color: rgb(248, 214, 20);
+    margin-bottom: 1rem;
+}
+
+/* -------------- Population section Ends Here -------------------*/
+
+/* -------------- How it works section Starts Here -------------------*/
+
+.work-steps{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.steps{
+    width: 25%;
+    text-align: center;
+}
+.steps img{
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+}
+.steps h3{
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: #555
+}
+
+/* -------------- How it works section Ends Here -------------------*/
+
+/* -------------- gallery section starts Here -------------------*/
+
+#gallery .items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#gallery .items-container .items{
+    width: 30%;
+    height: 25rem;
+    position: relative;
+    margin: 1rem;
+    border:1rem solid #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    background-color: #fff;
+    cursor: pointer;
+}
+#gallery .items-container .items::before{
+    content: '';
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+}
+
+#gallery .items-container .items img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#gallery .items-container .items .content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 11;
+    display: none;
+}
+#gallery .items-container .items .content h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    margin: 1rem auto;
+    color: #343434;
+}
+#gallery .items-container .items .content p{
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 1.5rem auto;
+}
+
+#gallery .items-container .items:hover::before{
+    height: 100%;
+    transition: 0.2s linear;
+}
+#gallery .items-container .items:hover .content{
+    display: block;
+    transition: 0.2s linear;
+}
+
+/* -------------- gallery section ends Here -------------------*/
+
+/* -------------- review section starts Here -------------------*/
+
+#review .items-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+#review .items-container .items{
+    width: 30%;
+    height: 30rem;
+    position: relative;
+    margin: 1rem;
+    border:1rem solid #fff;
+    background-color: #333;
+    box-shadow: 0 1rem 1rem rgb(0 0 0 / 30%);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+#review .items-container .items img{
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1rem solid #fff;
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    top: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#review .items-container .items h3{
+    font-size: 2.5rem;
+    color: rgb(226, 226, 226);
+    padding-top: 8rem;
+    font-family: 'Roboto', sans-serif;
+}
+#review .items-container .items .stars{
+    color: var(--primary-color);
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+#review .items-container .items p{
+    padding: 1.5rem;
+    color: #dedede;
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* -------------- review section ends Here -------------------*/
+
+/* -------------- order section starts Here -------------------*/
+
+.order-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    border-radius: 5rem;
+}
+.order-container .image{
+    width: 40%;
+    border: 2rem solid white;
+    border-radius: 3rem;
+}
+.order-container .order-form{
+    width: 60%;
+    height: 40rem;
+    border: 2rem solid white;
+}
+.order-container .order-form form input{
+    width: 40%;
+    height: 4rem;
+    border: 0.2rem solid rgb(180, 179, 179);
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    padding: 0rem 1rem;
+    color: #444;
+}
+
+.order-container .order-form form textarea{
+    width: 90%;
+    height: 15rem;
+    margin: 1rem;
+    border: 0.2rem solid rgb(180, 179, 179);
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    padding: 1rem 1rem;
+    text-transform: none;
+    color: #444;
+}
+input:focus, textarea:focus{
+    outline: none;
+}
+
+.order-container .order-form form button{
+    margin: 1rem;
+}
+
+/* -------------- order section ends Here -------------------*/
+
+/* -------------- footer starts Here -------------------*/
+
+footer{
+    height: 15rem;
+    background-color: #000;
+}
+footer .share-link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+footer .share-link a{
+    margin: 2rem 1rem;
+}
+footer h2{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* ------------- media Queries -------------- */
+
+@media (min-width:769px) and (max-width:1100px){
+    .btn-f{
+        padding: 1rem 2.5rem;
+    }
+    #speciality .items-container .items .content h3{
+        font-size: 2rem;
+    }
+    #speciality .items-container .items .content p{
+        font-size: 1rem;
+    }
+    #popular .items-container .items h3 {
+        font-size: 1.6rem;
+    }
+    .steps img{
+        width: 13rem;
+        padding: 0.7rem;
+    }
+    .steps h3{
+        font-size: 1.8rem;
+    }
+    #review .items-container .items h3{
+        font-size: 2.2rem;
+    }
+    #review .items-container .items p{
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+    .order-container .order-form form input{
+        width: 94%;
+        height: 3.5rem;
+        margin: 0.7rem;
+    }
+    .order-container .order-form form textarea{
+        height: 10rem;
+    }
+}
+@media (max-width:768px){
+    .btn {
+        padding: 1rem 2.5rem;
+    }
+    .btn-f{
+        padding: 1rem 2.5rem;
+    }
+    #menu-bar{
+        display: initial;
+    }
+    
+    header .nav-bar{
+        position: absolute;
+        top:100%; left: 0; right:0;
+        background: #f7f7f7;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .nav-bar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    header .nav-bar ul li{
+        margin: 1.5rem;
+        padding:1.5rem;
+        display: block;
+        border:.2rem solid rgba(0,0,0,.1);
+        background:#fff;
+    }
+    #home .home-content h2{
+        font-size: 2rem;
+    }
+    #home .home-content p{
+        font-size: 1rem;
+        word-spacing: 0rem;
+    }
+    #speciality .items-container .items{
+        width: 45%;
+        height: 20rem;
+    }
+    #speciality .items-container .items .content img{
+        margin: 0.5rem auto;
+    }
+    #speciality .items-container .items .content h3{
+        font-size: 1.5rem;
+        margin: 0.5rem auto;
+    }
+    #speciality .items-container .items .content p{
+        font-size: 1rem;
+    }
+    #popular .items-container .items{
+        width: 45%;
+        height: 30rem;
+    }
+    #popular .items-container .items img{
+        height: 60%;
+    }
+    
+    #popular .items-container .items h3{
+        font-size: 1.5rem;
+    }
+    #popular .items-container .items .stars-rating{
+        color: rgb(248, 214, 20);
+        margin-bottom: 1rem;
+    }
+    .steps{
+        width: 48%;
+        margin: 1rem 0rem;
+    }
+    .steps img{
+        padding: 0.5rem;
+    }
+    .steps h3{
+        font-size: 2rem;
+    }
+    #gallery .items-container .items{
+        width: 45%;
+        height: 20rem;
+    }
+    #review .items-container .items{
+        width: 45%;
+        height: 20rem;
+        margin: 3rem 1rem;
+    }
+    #review .items-container .items img{
+        border: 1rem solid #fff;
+        width: 10rem;
+        height: 10rem;
+    }
+    #review .items-container .items h3{
+        font-size: 1.5rem;
+        padding-top: 4.5rem;
+    }
+    #review .items-container .items .stars{
+        padding-top: 0.4rem;
+        font-size: 1.1rem;
+    }
+    #review .items-container .items p{
+        padding: 0.3rem;
+        font-size: 1rem;
+    }
+    .order-container .image{
+        border: 1rem solid white;
+        border-radius: 3rem;
+    }
+    .order-container .order-form{
+        height: 35rem;
+        border: 2rem solid white;
+    }
+    .order-container .order-form form input{
+        width: 100%;
+        height: 2.5rem;
+        margin: 0.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .order-container .order-form form textarea{
+        width: 100%;
+        height: 10rem;
+        margin: 0.5rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    footer .share-link a{
+        margin: 1rem;
+    }
+    footer h2{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:500px) {
+    :root{
+        font-size: 50%;
+    }
+    #home{
+        flex-direction: column;
+    }
+    #home .home-content{
+        width: 100%;
+    }
+    #home .home-content h2{
+        font-size: 3.8rem;
+    }
+    #home .home-image{
+        width: 100%;
+    }
+    #speciality .items-container{
+        flex-direction: column;
+    }
+    #speciality .items-container .items{
+        width: 100%;
+    }
+    #popular .items-container{
+        flex-direction: column;
+    }
+    #popular .items-container .items{
+        width: 100%;
+    }
+    .work-steps{
+        flex-direction: column;
+    }
+    .steps{
+        width: 100%;
+    }
+    #gallery .items-container{
+        flex-direction: column;
+    }
+    #gallery .items-container .items{
+        width: 100%;
+    }
+    #review .items-container{
+        flex-direction: column;
+    }
+    #review .items-container .items{
+        width: 100%;
+        margin-top: 6rem;
+    }
+    .order-container{
+        flex-direction: column;
+    }
+    .order-container .image{
+        width: 100%;
+    }
+    .order-container .order-form{
+        width: 100%;
+    }
+    footer{
+        height: 32rem;
+        background-color: #000;
+    }
+}

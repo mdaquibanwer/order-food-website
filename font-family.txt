@@ -1,0 +1,5 @@
+font used un the wep page
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
